@@ -1,0 +1,236 @@
+<WindowManager>:
+    GirisPenceresi:
+    KayitPenceresi:
+    OturumPenceresi:
+
+<GirisPenceresi>:
+
+
+    sifre: sifre
+    email : email
+
+#Arayüz
+    FloatLayout:
+    #Arkaplan
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "arkaplan.png"
+
+
+        Label:
+            text:"Uygulamam'a Hosgeldiniz "
+            bold: True
+            font_size:("25sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.95}
+            size_hint: 0.4, 0.05
+            color: 1,0,0,0.9
+
+        Label:
+            text:"E-mail: "
+            font_size:("20sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.85}
+            size_hint: 0.4, 0.05
+
+        TextInput:
+            id: email
+            write_tab: False
+            multiline:False
+            pos_hint: {"x":0.05, "top": 0.75}
+            size_hint: 0.9, 0.05
+
+
+        Label:
+            text: "Sifre: "
+            font_size:("20sp")
+            pos_hint: {"x":0.3, "top": 0.65}
+            size_hint: 0.4, 0.05
+
+        TextInput:
+            id: sifre
+            write_tab: False
+            password: True
+            multiline:False
+            pos_hint: {"x":0.05, "top": 0.55}
+            size_hint: 0.9, 0.05
+
+#Buttonlar
+        Button:
+            pos_hint: {"x":0.05, "top": 0.4}
+            size_hint: 0.9, 0.15
+            font_size: ("25sp")
+            text: "Giris Yap"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.girisBtn()
+
+        Button:
+            pos_hint: {"x":0.05, "top": 0.2}
+            size_hint: 0.45, 0.05
+            font_size: ("10sp")
+            text: "Uye ol!"
+            on_release:
+                root.manager.transition.direction = "up"
+                root.kayitBtn()
+
+        Button:
+            pos_hint: {"x":0.5, "top": 0.20}
+            size_hint: 0.45, 0.05
+            font_size: ("10sp")
+            text: "Cikis!"
+            on_release:
+                root.cikisBtn()
+
+
+<KayitPenceresi>:
+
+
+    isimk:isimk
+    emailk:emailk
+    sifrek:sifrek
+
+#Arayüz Kayit
+    FloatLayout:
+
+        #Arkaplan
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "arkaplan.png"
+
+        Label:
+            text:"Uygulama Kayit Formu "
+            bold: True
+            font_size:("22sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.95}
+            size_hint: 0.4, 0.05
+            color: 1,0,0,0.9
+
+        Label:
+            text:"Isminizi Giriniz: "
+            font_size:("18sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.9}
+            size_hint: 0.4, 0.05
+
+        TextInput:
+            id: isimk
+            write_tab: False
+            multiline:False
+            pos_hint: {"x":0.05, "top": 0.8}
+            size_hint: 0.9, 0.05
+
+
+        Label:
+            text:"E-mail Adressi Giriniz: "
+            font_size:("18sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.7}
+            size_hint: 0.4, 0.05
+
+        TextInput:
+            id: emailk
+            write_tab: False
+            multiline:False
+            pos_hint: {"x":0.05, "top": 0.6}
+            size_hint: 0.9, 0.05
+
+
+        Label:
+            text: "Sifre Giriniz: "
+            font_size:("18sp")
+            pos_hint: {"x":0.3, "top": 0.5}
+            size_hint: 0.4, 0.05
+
+        TextInput:
+            id: sifrek
+            write_tab: False
+            multiline:False
+            pos_hint: {"x":0.05, "top": 0.4}
+            size_hint: 0.9, 0.05
+
+#Tuslar Kayit
+        Button:
+            pos_hint: {"x":0.05, "top": 0.3}
+            size_hint: 0.9, 0.15
+            font_size: ("25sp")
+            text: "Kayit olustur!"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.onayBtn()
+
+        Button:
+            pos_hint: {"x":0.05, "top": 0.125}
+            size_hint: 0.9, 0.05
+            font_size: ("10sp")
+            text: "Geri git!"
+            on_release:
+                root.manager.transition.direction = "down"
+                root.geriBtn()
+
+<OturumPenceresi>:
+
+
+    isimo:isimo
+    emailo:emailo
+    tariho:tariho
+    basliko:basliko
+
+#Arayüz
+
+    FloatLayout:
+    #Arkaplan
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "arkaplan.png"
+
+        Label:
+            id: basliko
+            text:"Uygulamam'a Hosgeldiniz "
+            bold: True
+            font_size:("25sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.95}
+            size_hint: 0.4, 0.05
+            color: 1,0,0,0.9
+
+        Label:
+            id: isimo
+            text:"Kullanici ismi: "
+            font_size:("20sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.85}
+            size_hint: 0.4, 0.05
+
+        Label:
+            id: emailo
+            text:"Email: "
+            font_size:("20sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.75}
+            size_hint: 0.4, 0.05
+
+        Label:
+            id: tariho
+            text:"Katilim: "
+            font_size:("20sp")
+            valign: "middle"
+            pos_hint: {"x":0.3, "top": 0.65}
+            size_hint: 0.4, 0.05
+
+    #Buttonlar
+        Button:
+            pos_hint: {"x":0.05, "top": 0.125}
+            size_hint: 0.9, 0.05
+            font_size: ("10sp")
+            text: "Geri git!"
+            on_release:
+                root.manager.transition.direction = "down"
+                root.geriBtn()

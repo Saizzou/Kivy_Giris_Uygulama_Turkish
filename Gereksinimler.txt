@@ -1,0 +1,9 @@
+Gereksinimler:
+-Python 2.7.x+ veya Python 3.4.x-3.7.x (Yani Python 3.8.x ile Kivy çalışmayacaktır!)
+-Project Interpreters: 
+	+Kivy
+	+kivy-deps.angle
+	+kivy-deps.glew
+	+kivy-deps.gstreamer
+	+kivy-deps.sdl2
+

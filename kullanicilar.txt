@@ -1,0 +1,2 @@
+test@test.com;1234;test;2020-06-27
+kod@dunyam.net;koddunyam;Koddunyam;2020-06-27
